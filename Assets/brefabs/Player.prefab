@@ -4500,8 +4500,8 @@ GameObject:
   - component: {fileID: 6834460915741687695}
   - component: {fileID: 6436304138461288994}
   - component: {fileID: 6166326545483998472}
-  - component: {fileID: 6166326545483998475}
   - component: {fileID: 6166326545483998474}
+  - component: {fileID: 508245485}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4539,11 +4539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10396730c51752743825384b75b2572e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  enemyCount: 0
-  shootingSound: {fileID: 6166326545483998474}
-  bulletPosition: {fileID: 6436304138180863942}
-  bullet: {fileID: 8769826005551968766, guid: 22702071c5a42f04d8df2aaec0f4b636, type: 3}
   tankTower: {fileID: 585694704607152422}
   tankTowerPipe: {fileID: 8084416221837070886}
 --- !u!54 &6166326545483998472
@@ -4554,27 +4549,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6166326545483998517}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &6166326545483998475
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6166326545483998517}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.5, y: 2, z: 6}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!82 &6166326545483998474
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4587,7 +4569,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bfa3ec0debb7cea479e9322edb77ca24, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4671,6 +4653,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &508245485
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166326545483998517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.2933406
+  m_Height: 7.5926027
+  m_Direction: 2
+  m_Center: {x: -0.03361535, y: 1.2598048, z: 0.15820265}
 --- !u!1 &6215945400077382262
 GameObject:
   m_ObjectHideFlags: 0

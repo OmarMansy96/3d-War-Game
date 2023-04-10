@@ -566,5 +566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891d132b95dad5049b6d51fc01a01273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gM: {fileID: 0}
   enemyHelth: 3
   destroiedEnemy: {fileID: 6175172304232511127, guid: 0586e9e44e0b9d5468774c57842d8b85, type: 3}
