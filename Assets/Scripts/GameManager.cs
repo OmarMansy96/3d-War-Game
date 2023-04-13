@@ -7,7 +7,7 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    Vector3 bulletRescale=Vector3.one;
+    public Transform player;
     public Text endMessage;
     public Text bulletsCount_Text;
     public GameObject enemy;
@@ -24,23 +24,9 @@ public class GameManager : MonoBehaviour
     public Button start, reStart;
     void Start()
     {
-        enemyCount = PlayerPrefs.GetInt("enemyCount");
         Time.timeScale = 1;
         EnemyCountValidation();
-        if (enemyCount <=0)
-        {
-          enemyCount = Mathf.Abs( enemyCount);
-        }
-        else if (enemyCount >= 30)
-        {
-            enemyCount = 30;
-        }
-        for (int e = 0; e < enemyCount; e++)
-        {
-            var newEnemy = Instantiate(enemy);
-            newEnemy.transform.position = new Vector3(UnityEngine.Random.Range(-90, 90), 3, UnityEngine.Random.Range(-90, 90));
-            newEnemy.GetComponent<Enemy>().gM = this;
-        }
+       
         ButtonsSetActive(false);
         panel.SetActive(false);
         Debug.Log($"{enemyCount}");
@@ -65,21 +51,10 @@ public class GameManager : MonoBehaviour
     {
         enemyCount = PlayerPrefs.GetInt("enemyCount");
         Time.timeScale = 1;
-            if (enemyCount < 0)
-            {
-                enemyCount = Mathf.Abs(enemyCount);
-            }
-            else if (enemyCount >= 30)
-            {
-                enemyCount = 30;
-            }
-            else
-            {
-               enemyCount = 10;
-            }
+           
             for (int e = 0; e < enemyCount; e++)
             {
-                var newEnemy = Instantiate(enemy);
+                GameObject newEnemy = Instantiate(enemy);
                 newEnemy.transform.position = new Vector3(UnityEngine.Random.Range(-90, 90), 3, UnityEngine.Random.Range(-90, 90));
                 newEnemy.GetComponent<Enemy>().gM = this;
             }
