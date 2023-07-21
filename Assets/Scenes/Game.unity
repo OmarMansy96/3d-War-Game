@@ -674,6 +674,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
   m_PrefabInstance: {fileID: 297642570}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &498572312 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 498572312, guid: ad59ffaa64d2cc74fbe096fdb54c5ca2, type: 3}
+  m_PrefabInstance: {fileID: 517114522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &508245486 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 6166326545483998474, guid: ad59ffaa64d2cc74fbe096fdb54c5ca2, type: 3}
@@ -689,10 +694,6 @@ PrefabInstance:
     - target: {fileID: 6166326545483998517, guid: ad59ffaa64d2cc74fbe096fdb54c5ca2, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6166326545483998517, guid: ad59ffaa64d2cc74fbe096fdb54c5ca2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6436304138461288994, guid: ad59ffaa64d2cc74fbe096fdb54c5ca2, type: 3}
       propertyPath: moving_joystick
@@ -2468,19 +2469,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 108714374}
+  playerHead: {fileID: 498572312}
   endMessage: {fileID: 177891790}
   bulletsCount_Text: {fileID: 882517462}
-  enemy: {fileID: 8811765100664432231, guid: 71301150b9ab96d45976808e6d17c407, type: 3}
   enemyCount_Text: {fileID: 46532838}
-  enemyCount: 10
-  panel: {fileID: 1775503853}
-  shootingSound: {fileID: 508245486}
+  enemy: {fileID: 8811765100664432231, guid: 71301150b9ab96d45976808e6d17c407, type: 3}
   bulletPosition: {fileID: 2124153285}
   bullet: {fileID: 8769826005551968766, guid: 22702071c5a42f04d8df2aaec0f4b636, type: 3}
-  bulletsCount: 5
+  enemyCount: 10
+  bulletsCount: 0
   score: 0
-  start: {fileID: 254715}
-  reStart: {fileID: 856638418}
+  panel: {fileID: 1775503853}
+  shootingSound: {fileID: 508245486}
 --- !u!4 &2009878465
 Transform:
   m_ObjectHideFlags: 0

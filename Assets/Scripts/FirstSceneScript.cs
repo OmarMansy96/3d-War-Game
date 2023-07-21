@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class FirstSceneScript : MonoBehaviour
 {
-    public InputField playerNameInput, enemyCountInput;
     void Start()
     {
         
@@ -33,16 +32,19 @@ public class FirstSceneScript : MonoBehaviour
     public void EasyLevel()
     {
         PlayerPrefs.SetInt("enemyCount", 10);
+        PlayerPrefs.SetInt("bullets", 40);
         SceneManager.LoadScene("Game");
     }
     public void MediumLevel()
     {
         PlayerPrefs.SetInt("enemyCount",20);
+        PlayerPrefs.SetInt("bullets", 70);
         SceneManager.LoadScene("Game");
     }
     public void HardLevel()
     {
-        PlayerPrefs.SetInt("enemyCount", 30);
+        PlayerPrefs.SetInt("bullets", 95);
+        PlayerPrefs.SetInt("enemyCount",30);
         SceneManager.LoadScene("Game");
     }
 }
